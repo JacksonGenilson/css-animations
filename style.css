@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap");
+body {
+  margin: 0;
+  font-family: 'Lato', sans-serif; }
+
+#app {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%; }
+  #app .card {
+    flex: 0 0 25%;
+    padding-top: 25%;
+    position: relative; }
+    #app .card span {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      text-transform: uppercase;
+      transform: translate3d(-50%, -50%, 0);
+      color: #fff;
+      text-shadow: 0 0 10px #000000; }
+    #app .card:before {
+      content: "";
+      position: absolute;
+      width: 90%;
+      height: 90%;
+      left: 50%;
+      top: 50%;
+      transform: translate3d(-50%, -50%, 0); }
+    #app .card:nth-child(0):before {
+      background: #f45b87; }
+    #app .card:nth-child(1):before {
+      background: #bbdbae; }
+    #app .card:nth-child(2):before {
+      background: #d00ecd; }
+    #app .card:nth-child(3):before {
+      background: #64bec0; }
+    #app .card:nth-child(4):before {
+      background: #cd0866; }
+    #app .card:nth-child(5):before {
+      background: #778820; }
+    #app .card:nth-child(6):before {
+      background: #bf129c; }
+    #app .card:nth-child(7):before {
+      background: #790e54; }
+    #app .card:nth-child(8):before {
+      background: #9d2ea6; }
+    #app .card:nth-child(9):before {
+      background: #aed2ae; }
+    #app .card:nth-child(10):before {
+      background: #d52275; }
+    #app .card:nth-child(11):before {
+      background: #c2fca0; }
+    #app .card:nth-child(12):before {
+      background: #649876; }
+    #app .card:nth-child(13):before {
+      background: #7d7352; }
+    #app .card:nth-child(14):before {
+      background: #4c0974; }
+
+.animation.fade-in {
+  opacity: 0;
+  animation: fade-in 1s forwards; }
+
+.animation.fade-out {
+  animation: fade-out 1s forwards; }
+
+.animation.fade-up {
+  opacity: 0;
+  animation: fade-in 1s forwards, up 1s forwards; }
+
+.animation.fade-down {
+  opacity: 0;
+  animation: fade-in 1s forwards, down 1s forwards; }
+
+.animation.fade-left {
+  opacity: 0;
+  animation: fade-in 1s forwards, left 1s forwards; }
+
+.animation.fade-right {
+  opacity: 0;
+  animation: fade-in 1s forwards, right 1s forwards; }
+
+.animation.scale {
+  transform: scale(0);
+  animation: scale 1s forwards; }
+
+@keyframes scale {
+  0% {
+    transform: scale(0); }
+  100% {
+    transform: scale(1); } }
+
+@keyframes fade-in {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes fade-out {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+@keyframes up {
+  0% {
+    transform: translateY(20%); }
+  100% {
+    transform: translateY(0); } }
+
+@keyframes down {
+  0% {
+    transform: translateY(-20%); }
+  100% {
+    transform: translateY(0); } }
+
+@keyframes left {
+  0% {
+    transform: translateX(-20%); }
+  100% {
+    transform: translateX(0); } }
+
+@keyframes right {
+  0% {
+    transform: translateX(20%); }
+  100% {
+    transform: translateX(0); } }
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+
+@keyframes dash {
+  0% {
+    stroke-dashoffset: 4500; }
+  50% {
+    stroke-dashoffset: 0; }
+  100% {
+    stroke-dashoffset: -4500; } }
+
+@keyframes fill {
+  0% {
+    fill-opacity: 0; }
+  100% {
+    fill-opacity: 1; } }
+
+@keyframes blink {
+  0% {
+    fill-opacity: 0; }
+  5% {
+    fill-opacity: 1; }
+  95% {
+    fill-opacity: 1; }
+  100% {
+    fill-opacity: 0; } }

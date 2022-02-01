@@ -1,0 +1,5 @@
+# GitIgnore padrão para wordpress Finer
+
+# Arquivos e pastas que não serão enviados
+.DS_Store
+node_modules/

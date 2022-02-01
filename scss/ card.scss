@@ -1,0 +1,48 @@
+$card-size: 25%;
+
+@mixin random-bgr(){
+	background: rgb(random(255), random(255), random(255));
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap');
+
+body{
+	margin: 0;
+	font-family: 'Lato', sans-serif;
+}
+#app{
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	width: 100%;
+	.card{
+		flex: 0 0 $card-size;
+		padding-top: $card-size;
+		position: relative;
+		span{
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			text-transform: uppercase;
+			transform: translate3d(-50%, -50%, 0);
+			color: #fff;
+			text-shadow: 0 0 10px #000000;
+		} 
+		&:before { 
+			content: "";
+			position: absolute;
+			width: 90%;
+			height: 90%;
+			left: 50%;
+			top: 50%;
+			transform: translate3d(-50%, -50%, 0);
+		}
+		@for $i from 0 to 15 {
+			&:nth-child(#{$i}) {
+				&:before { 
+					@include random-bgr();
+				}
+			}
+		}
+	}
+}
